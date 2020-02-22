@@ -24,6 +24,10 @@
     box-sizing: border-box;
 }
 
+.header__logo {
+    margin-bottom: 5px;
+}
+
 /* header block end */
 
 /* logo block */
@@ -49,7 +53,7 @@
 }
 
 .top-nav__link {
-    margin-left: 37px;
+    margin-left: 29px;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
