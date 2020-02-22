@@ -31,7 +31,6 @@
 /* header block end */
 
 /* logo block */
-
 .logo {
     color: #ffffff;
     font-size: 25px;
@@ -42,11 +41,9 @@
 .logo__asterisk {
     color: #f06c64;
 }
-
 /* logo block end */
 
 /* top-nav block */
-
 .top-nav__list {
     display: flex;
     list-style: none;
@@ -64,5 +61,31 @@
 .top-nav__link_active {
     color: #f06c64;
 }
-
 /* top-nav block end */
+
+/* slider block */
+.slider {
+    position: relative;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.slider::before, .slider::after {
+    position: absolute;
+    top: 281px;
+    content: url(../images/chev.png);
+    cursor: pointer;
+}
+
+.slider::before {
+    left: 42px;
+}
+
+.slider::after {
+    right: 40px;
+    transform: rotate(180deg);
+}
+/* slider block end */
