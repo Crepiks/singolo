@@ -21,13 +21,13 @@
     justify-content: space-between;
     align-items: center;
     background-color: #2d303a;
+    border-bottom: 6px solid #323746;
     box-sizing: border-box;
 }
 
-.header__logo {
-    margin-bottom: 5px;
+.header__nav {
+    margin-top: 6px;
 }
-
 /* header block end */
 
 /* logo block */
@@ -68,24 +68,24 @@
     position: relative;
     height: 600px;
     display: flex;
-    align-items: center;
     justify-content: center;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .slider::before, .slider::after {
     position: absolute;
     top: 281px;
-    content: url(../images/chev.png);
     cursor: pointer;
 }
 
 .slider::before {
+    content: url(../images/chev_left.png);
     left: 42px;
 }
 
 .slider::after {
+    content: url(../images/chev_right.png);
     right: 40px;
-    transform: rotate(180deg);
 }
 /* slider block end */
