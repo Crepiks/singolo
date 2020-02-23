@@ -50,7 +50,7 @@
 }
 
 .top-nav__link {
-    margin-left: 29px;
+    margin-left: 14px;
     color: #ffffff;
     font-size: 12px;
     font-weight: bold;
@@ -58,8 +58,18 @@
     text-transform: uppercase;
 }
 
+.top-nav__link::before {
+    content: '·';
+    color: #494e62;
+    margin-right: 14px;
+}
+
 .top-nav__link_active {
     color: #f06c64;
+}
+
+.top-nav__link_no-point::before {
+    content: none;
 }
 /* top-nav block end */
 
