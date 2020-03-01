@@ -77,3 +77,25 @@ body {
 }
 
 /* filter block end */
+
+/* about section */
+
+.about {
+    padding: 60px 40px 0;
+    color: #666d89;
+    background-color: #f2f2f2;
+}
+
+.about__heading {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.about__subtitle {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* about section end */
