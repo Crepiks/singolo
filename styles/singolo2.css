@@ -1,4 +1,15 @@
+/* general styles */
 * {
     margin: 0;
     padding: 0;
 }
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.page {
+    width: 1020px;
+    margin: auto;
+}
+/* general styles end */
