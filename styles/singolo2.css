@@ -33,4 +33,31 @@ body {
     font-weight: 300;
 }
 
+.portfolio__filter {
+    margin-top: 14px;
+}
+
 /* portfolio section end */
+
+/* filter block */
+
+.filter__item {
+    margin-right: 8px;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666d89;
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: 300ms;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.filter__item_active, .filter__item:hover {
+    color: #c5c5c5;
+    border: 1px solid #c5c5c5;
+}
+
+/* filter block end */
