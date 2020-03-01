@@ -40,10 +40,12 @@ body {
 }
 
 .portfolio__grid {
+    height: 621px;
     margin-top: 19px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    overflow: hidden;
     box-sizing: border-box;
 }
 
