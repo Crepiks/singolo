@@ -17,9 +17,11 @@ body {
 /* portfolio section */
 
 .portfolio {
-    padding: 60px 40px 73px;
+    padding: 60px 40px 47px;
     color: #666d89;
     background-color: #2d303a;
+    border-bottom: 6px solid #323746;
+    box-sizing: border-box;
 }
 
 .portfolio__heading {
@@ -35,6 +37,20 @@ body {
 
 .portfolio__filter {
     margin-top: 14px;
+}
+
+.portfolio__grid {
+    margin-top: 19px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.portfolio__image {
+    width: 220px;
+    height: 187px;
+    margin-bottom: 20px;
 }
 
 /* portfolio section end */
