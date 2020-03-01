@@ -13,3 +13,24 @@ body {
     margin: auto;
 }
 /* general styles end */
+
+/* portfolio section */
+
+.portfolio {
+    padding: 60px 40px 73px;
+    color: #666d89;
+    background-color: #2d303a;
+}
+
+.portfolio__heading {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.portfolio__subtitle {
+    margin-top: 23px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+/* portfolio section end */
