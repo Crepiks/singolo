@@ -98,4 +98,37 @@ body {
     font-weight: 300;
 }
 
+.about__cards {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
 /* about section end */
+
+/* profile-card block */
+
+.profile-card {
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.profile-card__image {
+    width: 100%;
+    height: 300px;
+}
+
+.profile-card__name {
+    margin-top: 12px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.profile-card__description {
+    margin-top: 10px;
+    line-height: 1.7;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* profile-card block end */
