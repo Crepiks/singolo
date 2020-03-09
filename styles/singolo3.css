@@ -18,9 +18,11 @@
 /* contact block */
 
 .contact {
-    padding: 60px 40px;
+    padding: 55px 34px 50px;
     color: #f0d8d9;
     background-color: #f06c64;
+    border: 6px solid #ea676b;
+    box-sizing: border-box;
 }
 
 .contact__heading {
