@@ -120,3 +120,35 @@
 }
 
 /* info block end */
+
+/* footer block */
+
+.footer {
+    height: 76px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666d89;
+    font-size: 11px;
+    background-color: #2d303a;
+}
+
+.footer__icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer__icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+/* footer block end */
