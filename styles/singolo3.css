@@ -84,6 +84,16 @@
     padding: 12px 15px;
 }
 
+.form__button {
+    height: 40px;
+    width: 120px;
+    color: #f48c8f;
+    background-color: #d6564f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 /* form block end */
 
 /* info block */
