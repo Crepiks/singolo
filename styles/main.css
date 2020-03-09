@@ -1,0 +1,479 @@
+@import url(lato.css);
+
+/* general styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    max-width: 1020px;
+    height: 100vh;
+    margin: auto;
+    font-family: 'Lato', sans-serif;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+/* general styles end */
+
+/* header block */
+.header {
+    height: 95px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
+    box-sizing: border-box;
+}
+
+.header__nav {
+    margin-top: 6px;
+}
+/* header block end */
+
+/* logo block */
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.logo__asterisk {
+    color: #f06c64;
+}
+/* logo block end */
+
+/* top-nav block */
+.top-nav__list {
+    display: flex;
+    list-style: none;
+}
+
+.top-nav__link {
+    margin-left: 14px;
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.top-nav__link::before {
+    content: '·';
+    color: #494e62;
+    margin-right: 14px;
+}
+
+.top-nav__link_active {
+    color: #f06c64;
+}
+
+.top-nav__link_no-point::before {
+    content: none;
+}
+/* top-nav block end */
+
+/* slider block */
+.slider {
+    position: relative;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 6px solid #ea676b;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.slider::before, .slider::after {
+    position: absolute;
+    top: 281px;
+    cursor: pointer;
+}
+
+.slider::before {
+    content: url(../assets/images/chev_left.png);
+    left: 42px;
+}
+
+.slider::after {
+    content: url(../assets/images/chev_right.png);
+    right: 40px;
+}
+/* slider block end */
+
+/* services block */
+.services {
+    padding: 60px 40px 68px;
+    color: #666d89;
+    background-color: #f2f2f2;
+    border-bottom: 6px solid #ffffff;
+    box-sizing: border-box;
+}
+
+.services__heading {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.services__paragraph {
+    margin-top: 18px;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: 0.1px;
+}
+
+.services__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.services__card {
+    width: 300px;
+    height: 86px;
+    margin-top: 43px;
+}
+
+.services__card:nth-child(4), .services__card:nth-child(5), .services__card:nth-child(6) {
+    margin-top: 37px;
+}
+/* services block end */
+
+/* card block */
+.card {
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.card__icon-container {
+    width: 60px;
+    height: 60px;
+    margin: 4px 0 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #666d89;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.card__text-block {
+    width: 220px;
+}
+
+.card__heading {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.card__description {
+    margin-top: 8px;
+    letter-spacing: 0.5px;
+    line-height: 22px;
+    font-size: 11px;
+}
+/* card block end */
+
+/* portfolio section */
+
+.portfolio {
+    padding: 60px 40px 47px;
+    color: #666d89;
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
+    box-sizing: border-box;
+}
+
+.portfolio__heading {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.portfolio__subtitle {
+    margin-top: 23px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.portfolio__filter {
+    margin-top: 14px;
+}
+
+.portfolio__grid {
+    height: 621px;
+    margin-top: 19px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.portfolio__image {
+    width: 220px;
+    height: 187px;
+    margin-bottom: 20px;
+}
+
+/* portfolio section end */
+
+/* filter block */
+
+.filter__item {
+    margin-right: 8px;
+    padding: 3px 6px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #666d89;
+    border: 1px solid #666d89;
+    border-radius: 5px;
+    background-color: transparent;
+    transition: 300ms;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.filter__item_active, .filter__item:hover {
+    color: #c5c5c5;
+    border: 1px solid #c5c5c5;
+}
+
+/* filter block end */
+
+/* about section */
+
+.about {
+    padding: 60px 40px 68px;
+    color: #666d89;
+    border-bottom: 6px solid #ffffff;
+    background-color: #f2f2f2;
+    box-sizing: border-box;
+}
+
+.about__heading {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.about__subtitle {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.about__cards {
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* about section end */
+
+/* profile-card block */
+
+.profile-card {
+    width: 300px;
+    box-sizing: border-box;
+}
+
+.profile-card__image {
+    width: 100%;
+    height: 300px;
+}
+
+.profile-card__name {
+    height: 20px;
+    margin-top: 12px;
+    overflow: hidden;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.profile-card__description {
+    margin-top: 10px;
+    line-height: 1.7;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.profile-card__social-icons {
+    margin-top: 23px;
+    display: flex;
+}
+
+/* profile-card block end */
+
+/* social-icon block */
+
+.social-icon {
+    height: 32px;
+    width: 32px;
+    margin-right: 9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #6a718c;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+/* social-icon block end */
+
+/* contact block */
+
+.contact {
+    padding: 55px 34px 50px;
+    color: #f0d8d9;
+    background-color: #f06c64;
+    border: 6px solid #ea676b;
+    box-sizing: border-box;
+}
+
+.contact__heading {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.contact__paragraph {
+    margin-top: 20px;
+    line-height: 1.6;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.contact__body {
+    margin-top: 43px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact__form {
+    width: 620px;
+}
+
+.contact__info {
+    padding: 0 20px;
+    width: 320px;
+    box-sizing: border-box;
+}
+
+
+/* contact block end */
+
+/* form block */
+
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form__input, .form__textarea {
+    width: 100%;
+    height: 38px;
+    margin-bottom: 16px;
+    padding: 0 15px;
+    border: none;
+    background-color: #d6564f;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form__input::placeholder, .form__textarea::placeholder {
+    font-size: 12px;
+    color: #f48c8f;
+}
+
+.form__textarea {
+    height: 202px;
+    padding: 12px 15px;
+}
+
+.form__button {
+    height: 40px;
+    width: 120px;
+    color: #f48c8f;
+    background-color: #d6564f;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* form block end */
+
+/* info block */
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.info__heading {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.info__paragraph {
+    margin-top: 10px;
+    line-height: 1.75;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.info__details {
+    margin-top: 26px;
+    font-size: 12px;
+    list-style: none;
+}
+
+.info__detail {
+    margin-bottom: 10px;
+}
+
+.info__icon {
+    margin-right: 15px;
+}
+
+/* info block end */
+
+/* footer block */
+
+.footer {
+    height: 76px;
+    padding: 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666d89;
+    font-size: 11px;
+    background-color: #2d303a;
+}
+
+.footer__icons {
+    display: flex;
+    align-items: center;
+}
+
+.footer__icon {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #666d89;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+/* footer block end */
