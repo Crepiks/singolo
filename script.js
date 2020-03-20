@@ -39,18 +39,34 @@ function handleNavLinkClick(event) {
 
 function scroll(offset) {
     var SPEED = 50;
+    var DELAY = 10;
     var currentOffset = window.pageYOffset;
-    if (currentOffset > offset) {
-        for (var i = currentOffset; i > offset; i -= SPEED) {
-            window.scrollTo(0, i);
-        }
-    } else {
-        for (var i = currentOffset; i < offset; i += SPEED) {
-            window.scrollTo(0, i);
+
+    function scrollDown() {
+        if (currentOffset < offset) {
+            window.scrollTo(0, currentOffset);
+            currentOffset += SPEED;
+            timer = setTimeout(scrollDown, DELAY);
+        } else {
+            clearTimeout(timer);
+            window.scrollTo(0, offset);
         }
     }
-    currentOffset = window.pageYOffset;
-    if (currentOffset !== offset) {
-        window.scrollTo(0, offset);
+
+    function scrollUp() {
+        if (currentOffset > offset) {
+            window.scrollTo(0, currentOffset);
+            currentOffset -= SPEED;
+            timer = setTimeout(scrollUp, DELAY);
+        } else {
+            clearTimeout(timer);
+            window.scrollTo(0, offset);
+        }
+    }
+
+    if (currentOffset > offset) {
+        scrollUp();
+    } else {
+        scrollDown();
     }
 }
