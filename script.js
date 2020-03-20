@@ -33,8 +33,17 @@ function changeActiveNavLink(event) {
 function handleNavLinkClick(event) {
     event.preventDefault();
     changeActiveNavLink(event);
-    console.log("Clicked")
-    scroll(2000)
+    console.log("Clicked");
+    console.log(event.target.href);
+    var targetId = getAnchor(event.target.href);
+    if (targetId) {
+        var targetElement = document.getElementById(targetId);
+        scroll(targetElement.offsetTop)
+    }
+}
+
+function getAnchor(url) {
+    return (url.split('#').length > 1) ? url.split('#')[1] : null;
 }
 
 function scroll(offset) {
