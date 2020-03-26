@@ -49,6 +49,7 @@ function getAnchor(url) {
 function scroll(offset) {
     var SPEED = 50;
     var DELAY = 10;
+    var HEADER_HEIGHT = 95;
     var currentOffset = window.pageYOffset;
 
     function scrollDown() {
@@ -58,7 +59,7 @@ function scroll(offset) {
             timer = setTimeout(scrollDown, DELAY);
         } else {
             clearTimeout(timer);
-            window.scrollTo(0, offset);
+            window.scrollTo(0, offset - HEADER_HEIGHT);
         }
     }
 
@@ -69,7 +70,7 @@ function scroll(offset) {
             timer = setTimeout(scrollUp, DELAY);
         } else {
             clearTimeout(timer);
-            window.scrollTo(0, offset);
+            window.scrollTo(0, offset - HEADER_HEIGHT);
         }
     }
 
