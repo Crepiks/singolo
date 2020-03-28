@@ -151,6 +151,11 @@ function handlePortfolioTabClick(e) {
     var ACTIVE_CLASS = 'filter__item_active';
     deactivatePortfolioTabs(PORTFOLIO_TABS, ACTIVE_CLASS);
     activatePortfolioTab(CURRENT_TAB, ACTIVE_CLASS);
+
+    var portfolioImages = getPortfolioImages();
+    var newPortfolioImages = changePortfolioImagesOrder(portfolioImages);
+    unmountPortfolioImages();
+    mountPortfolioImages(newPortfolioImages);
 }
 
 function activatePortfolioTab(tab, activeClass) {
@@ -171,4 +176,34 @@ function getPortolioTabs() {
     return document.querySelector('.portfolio__filter').getElementsByClassName('filter__item');
 }
 
+function getPortfolioImages() {
+    return document.getElementsByClassName('portfolio__image');
+}
+
+function changePortfolioImagesOrder(images) {
+    var lastElement = images[images.length - 1];
+    var newImagesArray = [];
+    newImagesArray.push(lastElement);
+    for (var i = 0; i < images.length - 1; i++) {
+        newImagesArray.push(images[i]);
+    }
+    return newImagesArray;
+}
+
+function unmountPortfolioImages() {
+    var CONTAINER = document.querySelector('.portfolio__grid');
+    CONTAINER.innerHTML = '';
+}
+
+function mountPortfolioImages(images) {
+    var CONTAINER = document.querySelector('.portfolio__grid');
+    for (var i = 0; i < images.length; i++) {
+        CONTAINER.appendChild(images[i]);
+    }
+}
+
 /* Portfolio section effects end */
+
+/* helpers */
+
+/* helpers end */
