@@ -228,6 +228,11 @@ a {
     width: 220px;
     height: 187px;
     margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.portfolio__image_active {
+    border: 5px solid #F06C64;
 }
 
 /* portfolio section end */

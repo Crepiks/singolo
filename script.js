@@ -136,6 +136,7 @@ function scroll(offset) {
 
 function activatePortfolioSection() {
     listenPortfolioTabsClick();
+    listenPortfolioImagesClick();
 }
 
 function listenPortfolioTabsClick() {
@@ -199,6 +200,36 @@ function mountPortfolioImages(images) {
     var CONTAINER = document.querySelector('.portfolio__grid');
     for (var i = 0; i < images.length; i++) {
         CONTAINER.appendChild(images[i]);
+    }
+}
+
+function listenPortfolioImagesClick() {
+    var PORTFOLIO_IMAGES = getPortfolioImages();
+    for (var i = 0; i < PORTFOLIO_IMAGES.length; i++) {
+        PORTFOLIO_IMAGES[i].addEventListener('click', handlePortfolioImageClick);
+    }
+}
+
+function handlePortfolioImageClick(e) {
+    var CURRENT_ELEMENT = e.target;
+    var PORTFOLIO_IMAGES = getPortfolioImages();
+    var ACTIVE_CLASS = 'portfolio__image_active';
+    deactivateAllPortfolioImages(PORTFOLIO_IMAGES, ACTIVE_CLASS);
+    activatePortfolioImage(CURRENT_ELEMENT, ACTIVE_CLASS);
+}
+
+function deactivateAllPortfolioImages(images, activeClass) {
+    for (var i = 0; i < images.length; i++) {
+        var currentImage = images[i];
+        if (currentImage.classList.contains(activeClass)) {
+            currentImage.classList.remove(activeClass);
+        }
+    }
+}
+
+function activatePortfolioImage(portfolioImage, activeClass) {
+    if (!portfolioImage.classList.contains(activeClass)) {
+        portfolioImage.classList.add(activeClass);
     }
 }
 
