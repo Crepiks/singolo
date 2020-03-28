@@ -1,7 +1,9 @@
 window.onload = function() {
     activateNavLinks();
+    activatePortfolioSection();
 }
 
+/* TopNav links effects and scrolling */
 function activateNavLinks() {
     var NAV_LINKS = document.getElementsByClassName('top-nav__link');
     listenEventOnElements(NAV_LINKS, 'click', handleNavLinkClick);
@@ -127,3 +129,46 @@ function scroll(offset) {
         scrollDown();
     }
 }
+
+/* TopNav links effects and scrolling end */
+
+/* Portfolio section effects */
+
+function activatePortfolioSection() {
+    listenPortfolioTabsClick();
+}
+
+function listenPortfolioTabsClick() {
+    var PORTFOLIO_TABS = getPortolioTabs();
+    for (var i = 0; i < PORTFOLIO_TABS.length; i++) {
+        PORTFOLIO_TABS[i].addEventListener('click', handlePortfolioTabClick);
+    }
+}
+
+function handlePortfolioTabClick(e) {
+    var CURRENT_TAB = e.target;
+    var PORTFOLIO_TABS = getPortolioTabs();
+    var ACTIVE_CLASS = 'filter__item_active';
+    deactivatePortfolioTabs(PORTFOLIO_TABS, ACTIVE_CLASS);
+    activatePortfolioTab(CURRENT_TAB, ACTIVE_CLASS);
+}
+
+function activatePortfolioTab(tab, activeClass) {
+    if (!tab.classList.contains(activeClass)) {
+        tab.classList.add(activeClass);
+    }
+}
+
+function deactivatePortfolioTabs(tabs, activeClass) {
+    for (var i = 0; i < tabs.length; i++) {
+        if (tabs[i].classList.contains(activeClass)) {
+            tabs[i].classList.remove(activeClass);
+        }
+    }
+}
+
+function getPortolioTabs() {
+    return document.querySelector('.portfolio__filter').getElementsByClassName('filter__item');
+}
+
+/* Portfolio section effects end */
