@@ -83,8 +83,6 @@ function changeActiveNavLink(event) {
 function handleNavLinkClick(event) {
     event.preventDefault();
     changeActiveNavLink(event);
-    console.log("Clicked");
-    console.log(event.target.href);
     var targetId = getAnchor(event.target.href);
     if (targetId) {
         var targetElement = document.getElementById(targetId);
