@@ -1,6 +1,7 @@
 window.onload = function() {
     activateNavLinks();
     activatePortfolioSection();
+    activateForm();
 }
 
 /* TopNav links effects and scrolling */
@@ -234,6 +235,39 @@ function activatePortfolioImage(portfolioImage, activeClass) {
 }
 
 /* Portfolio section effects end */
+
+/* Get a quote */
+
+function activateForm() {
+    var FORM = document.getElementById('form');
+    FORM.addEventListener('submit', handleFormSubmit);
+}
+
+function handleFormSubmit(e) {
+    e.preventDefault();
+    var FORM = e.target;
+    var textContent = [];
+    textContent.push('Письмо отправлено');
+
+    var subject = FORM.subject.value;
+    if (!subject) {
+        textContent.push('Без темы');
+    } else {
+        textContent.push('Тема: ' + subject);
+    }
+
+    var description = FORM.description.value;
+    if (!description) {
+        textContent.push('Без описания');
+    } else {
+        textContent.push('Описание: ' + description);
+    }
+
+    alert(textContent.join('\n'));
+    FORM.reset();
+}
+
+/* Get a quote end */
 
 /* helpers */
 
