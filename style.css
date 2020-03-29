@@ -659,6 +659,12 @@ a {
     box-sizing: border-box;
 }
 
+@media all and (max-width: 767px) {
+    .footer {
+        justify-content: center;
+    }
+}
+
 /* footer block end */
 
 /* responsiveness */
