@@ -267,11 +267,12 @@ a {
     margin-top: 37px;
 }
 
-@media all and (max-width: 767px) {
+@media all and (max-width: 374px) {
     .services {
-        padding: 25px 32px 15px;
+        padding: 25px 15px 15px;
     }
 }
+
 /* services block end */
 
 /* card block */
@@ -369,13 +370,15 @@ a {
 }
 
 @media all and (max-width: 767px) {
-    .portfolio {
-        padding: 42px 30px;
-    }
-
     .portfolio__image {
         width: 140px;
         height: 128px;
+    }
+}
+
+@media all and (max-width: 374px) {
+    .portfolio {
+        padding: 42px 10px;
     }
 }
 
@@ -511,7 +514,7 @@ a {
 
 @media all and (max-width: 767px) {
     .profile-card__image {
-        heigth: 314px;
+        height: 314px;
     }
 }
 
@@ -559,7 +562,6 @@ a {
     margin-top: 43px;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
 }
 
 .contact__form {
@@ -583,6 +585,11 @@ a {
 }
 
 @media all and (max-width: 767px) {
+
+    .contact__body {
+        flex-wrap: wrap;
+    }
+
     .contact__form, .contact__info {
         padding: 0;
         width: 100%;
