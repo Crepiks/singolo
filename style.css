@@ -136,6 +136,56 @@ a {
     content: url(../assets/images/chev_right.png);
     right: 40px;
 }
+
+@media all and (max-width: 1019px) {
+
+    .slider {
+        height: 451px;
+        margin-top: 71px;
+        padding: 0 84px;
+    }
+
+    .slider::before, .slider::after {
+        top: 211px;
+    }
+
+    .slider__item_vertical {
+        width: 181px;
+    }
+
+    .slider__item_horizontal {
+        width: 365px;
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    .slider {
+        height: 220px;
+        padding: 0 42px;
+    }
+
+    .slider::before, .slider::after {
+        top: 98px;
+    }
+
+    .slider::before {
+        left: 10px;
+    }
+    
+    .slider::after {
+        right: 10px;
+    }
+
+    .slider__item_vertical {
+        width: 88px;
+    }
+
+    .slider__item_horizontal {
+        width: 177px;
+    }
+}
+
 /* slider block end */
 
 /* services block */
