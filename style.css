@@ -395,6 +395,38 @@ a {
     margin-top: 45px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about__card {
+    width: 300px;
+}
+
+@media all and (max-width: 1019px) {
+    
+    .about {
+        padding: 60px 30px 68px;
+    }
+
+    .about__card {
+        width: 219px;
+    }
+}
+
+@media all and (max-width: 767px) {
+
+    .about {
+        padding: 33px 30px 45px;
+    }
+
+    .about__cards {
+        justify-content: center;
+    }
+
+    .about__card {
+        width: 314px;
+        margin-bottom: 34px;
+    }
 }
 
 /* about section end */
@@ -402,7 +434,6 @@ a {
 /* profile-card block */
 
 .profile-card {
-    width: 300px;
     box-sizing: border-box;
 }
 
@@ -429,6 +460,18 @@ a {
 .profile-card__social-icons {
     margin-top: 23px;
     display: flex;
+}
+
+@media all and (max-width: 1019px) {
+    .profile-card__image {
+        height: 218px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .profile-card__image {
+        heigth: 314px;
+    }
 }
 
 /* profile-card block end */
