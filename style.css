@@ -40,9 +40,24 @@ a {
     margin-top: 6px;
 }
 
+.header__menu-open {
+    position: absolute;
+    left: 20px;
+    top: 26px;
+    width: 25px;
+    height: 20px;
+}
+
 @media all and (max-width: 1019px) {
     .header {
         width: 100%;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .header {
+        height: 71px;
+        justify-content: center;
     }
 }
 /* header block end */
@@ -493,3 +508,21 @@ a {
 }
 
 /* footer block end */
+
+/* responsiveness */
+
+.desktop-hidden {
+    display: none;
+}
+
+@media all and (max-width: 767px) {
+    .desktop-hidden {
+        display: inherit;
+    }
+
+    .mobile-hidden {
+        display: none;
+    }
+}
+
+/* responsiveness end */
