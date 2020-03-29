@@ -315,6 +315,29 @@ a {
     border: 5px solid #F06C64;
 }
 
+@media all and (max-width: 1019px) {
+
+    .portfolio__grid {
+        height: auto;
+    }
+
+    .portfolio__image {
+        width: 216px;
+        height: 183px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .portfolio {
+        padding: 42px 30px;
+    }
+
+    .portfolio__image {
+        width: 140px;
+        height: 128px;
+    }
+}
+
 /* portfolio section end */
 
 /* filter block */
@@ -336,6 +359,12 @@ a {
 .filter__item_active, .filter__item:hover {
     color: #c5c5c5;
     border: 1px solid #c5c5c5;
+}
+
+@media all and (max-width: 767px) {
+    .filter__item {
+        margin-right: 4px;
+    }
 }
 
 /* filter block end */
