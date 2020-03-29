@@ -225,6 +225,12 @@ a {
 .services__card:nth-child(4), .services__card:nth-child(5), .services__card:nth-child(6) {
     margin-top: 37px;
 }
+
+@media all and (max-width: 767px) {
+    .services {
+        padding: 25px 32px 15px;
+    }
+}
 /* services block end */
 
 /* card block */
