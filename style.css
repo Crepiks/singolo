@@ -518,6 +518,7 @@ a {
     margin-top: 43px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .contact__form {
@@ -530,6 +531,26 @@ a {
     box-sizing: border-box;
 }
 
+@media all and (max-width: 1019px) {
+    .contact__form {
+        width: 442px;
+    }
+
+    .contact__info {
+        width: 221px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .contact__form, .contact__info {
+        padding: 0;
+        width: 100%;
+    }
+
+    .contact__info {
+        margin-top: 32px;
+    }
+}
 
 /* contact block end */
 
