@@ -1,5 +1,6 @@
 window.onload = function() {
     activateNavLinks();
+    activateMenuButton();
     activatePortfolioSection();
     activateForm();
 }
@@ -9,6 +10,36 @@ function activateNavLinks() {
     var NAV_LINKS = document.getElementsByClassName('top-nav__link');
     listenEventOnElements(NAV_LINKS, 'click', handleNavLinkClick);
     window.addEventListener('scroll', activateNavLinkOnScroll);
+}
+
+function activateMenuButton() {
+    var MENU_BUTTON = document.querySelector('.header__menu');
+    MENU_BUTTON.addEventListener('click', handleMenuButtonClick);
+}
+
+function handleMenuButtonClick(e) {
+    var MENU_BUTTON = e.target;
+    var MENU_OPEN_CLASS = 'header__menu_open';
+    var TOP_NAV_OPEN_CLASS = 'top-nav_open';
+    if (MENU_BUTTON.classList.contains(MENU_OPEN_CLASS)) {
+        closeMobileMenu(MENU_OPEN_CLASS, TOP_NAV_OPEN_CLASS);
+    } else {
+        openMobileMenu(MENU_OPEN_CLASS, TOP_NAV_OPEN_CLASS);
+    }
+}
+
+function closeMobileMenu(menuOpenClass, topNavOpenClass) {
+    var MENU_BUTTON = document.querySelector('.header__menu');
+    var TOP_NAV = document.querySelector('.top-nav');
+    MENU_BUTTON.classList.remove(menuOpenClass);
+    TOP_NAV.classList.remove(topNavOpenClass);
+}
+
+function openMobileMenu(menuOpenClass, topNavOpenClass) {
+    var MENU_BUTTON = document.querySelector('.header__menu');
+    var TOP_NAV = document.querySelector('.top-nav');
+    MENU_BUTTON.classList.add(menuOpenClass);
+    TOP_NAV.classList.add(topNavOpenClass);
 }
 
 function activateNavLinkOnScroll() {
@@ -82,6 +113,11 @@ function changeActiveNavLink(event) {
 
 function handleNavLinkClick(event) {
     event.preventDefault();
+
+    var MENU_OPEN_CLASS = 'header__menu_open';
+    var TOP_NAV_OPEN_CLASS = 'top-nav_open';
+    closeMobileMenu(MENU_OPEN_CLASS, TOP_NAV_OPEN_CLASS);
+
     changeActiveNavLink(event);
     var targetId = getAnchor(event.target.href);
     if (targetId) {
