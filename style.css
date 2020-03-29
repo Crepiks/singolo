@@ -111,8 +111,11 @@ a {
     position: relative;
     height: 600px;
     margin-top: 95px;
+    padding: 0 112px;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f06c64;
     border-bottom: 6px solid #ea676b;
     box-sizing: border-box;
     overflow: hidden;
