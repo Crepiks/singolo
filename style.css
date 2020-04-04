@@ -169,12 +169,12 @@ a {
 }
 
 .slider::before {
-    content: url(../assets/images/chev_left.png);
+    content: url(./assets/images/chev_left.png);
     left: 42px;
 }
 
 .slider::after {
-    content: url(../assets/images/chev_right.png);
+    content: url(./assets/images/chev_right.png);
     right: 40px;
 }
 
